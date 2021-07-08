@@ -1,36 +1,32 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  mainContainer: {
+  container: {
+    justifyContent: 'center',
     flex: 1,
-    justifyContent: "center",
-    marginHorizontal: 20
   },
-  title: {
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#000",
-    alignSelf: "center"
+  loaderView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  input: {
-    height: 45,
-    borderColor: "#e3e3e3",
-    borderWidth: 1,
-    borderRadius: 5,
-    marginTop: 15,
-    paddingHorizontal: 15,
-    fontSize: 16
+  footer: {
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  button: {
-    height: 40,
-    backgroundColor: "#04637a",
-    justifyContent: "center",
-    marginTop: 15,
-    borderRadius: 10
+  loadMoreBtn: {
+    padding: 10,
+    backgroundColor: '#800000',
+    borderRadius: 4,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  loginText: {
-    fontSize: 16,
-    color: "#ffffff",
-    textAlign: "center"
-  }
+  btnText: {
+    color: 'white',
+    fontSize: 15,
+    textAlign: 'center',
+  },
 });

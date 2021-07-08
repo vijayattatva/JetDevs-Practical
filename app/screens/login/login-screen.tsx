@@ -7,8 +7,8 @@ import { styles } from './styles';
 const MY_EMAIL = "reactnative@imaginato.com";
 const MY_PASSWORD = "imaginato@123";
 const LoginScreen = () => {
-  const [email, setEmail] = useState(MY_EMAIL);
-  const [password, setPassword] = useState(MY_PASSWORD);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const login = useSelector((state: any) => state.UserLogin);
   const dispatch = useDispatch();
 

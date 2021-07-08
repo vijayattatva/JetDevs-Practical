@@ -1,19 +1,32 @@
 import * as Action from '../types';
 
-export const getUserDetails = (pageNumber) => {
+export const getUserDetails = (isLoadMore?) => {
   return async dispatch => {
     try {
-      dispatch(Loading(true));
-      fetch(`https://randomuser.me/api/?results=${pageNumber}`, {
+      if(!isLoadMore){
+        dispatch(Loading(true));
+      }      
+      await fetch(`https://randomuser.me/api/?results=10`, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
       })
-        .then(res => console.log('====Response', res))
-        .catch(err => console.log('==err', err));
+        .then(async res => {
+          let responseJson = await res.json();
+          if (isLoadMore) {
+            dispatch(LoadMoreUserData(responseJson.results)); 
+          }else{
+            dispatch(UserData(responseJson.results));
+          }          
+        })
+        .catch(err => {
+          console.log('==err',err)
+          dispatch(Failed(err));
+        });
     } catch (error) {
+      dispatch(Loading(false));
       console.log('====Error', error);
     }
   };
@@ -24,10 +37,15 @@ export const Loading = loading => ({
   payload: loading,
 });
 
-export const LoggedIn = data => ({
+export const UserData = data => ({
   type: Action.USER_SUCCESS,
   payload: data,
 });
+
+export const LoadMoreUserData = data => ({
+  type: Action.USER_LOADMORE,
+  payload: data,
+})
 
 export const Failed = error => ({
   type: Action.USER_FAILED,
