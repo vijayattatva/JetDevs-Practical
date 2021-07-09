@@ -13,7 +13,9 @@ project
 │   ├── assets
 
 │   ├── components
+
 │   ├── navigation
+
 │   ├── redux
 │   ├── screens
 ├── README.md
