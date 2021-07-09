@@ -18,6 +18,7 @@ project
 │   ├── navigation
 
 │   ├── redux
+
 │   ├── screens
 
 ├── README.md
