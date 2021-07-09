@@ -8,6 +8,7 @@ Currently includes:
 - TypeScript
 
 project
+
 ├── app
 
 │   ├── assets
@@ -18,24 +19,43 @@ project
 
 │   ├── redux
 │   ├── screens
+
 ├── README.md
+
 ├── android
+
 │   ├── app
+
 │   ├── build.gradle
+
 │   ├── gradle
+
 │   ├── gradle.properties
+
 │   ├── gradlew
+
 │   ├── gradlew.bat
+
 │   ├── keystores
+
 │   └── settings.gradle
+
 ├── index.js
+
 ├── ios
+
 │   ├── JetDevPractical
+
 │   ├── JetDevPractical-tvOS
+
 │   ├── JetDevPractical-tvOSTests
+
 │   ├── JetDevPractical.xcodeproj
+
 │   └── JetDevPractical
+
 └── package.json
+
 
 **assets** Where all the images will live of the entire application.
 
