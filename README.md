@@ -9,7 +9,9 @@ Currently includes:
 
 project
 ├── app
+
 │   ├── assets
+
 │   ├── components
 │   ├── navigation
 │   ├── redux
@@ -67,7 +69,7 @@ pod install
 
 react-native run-ios
 
-Start node server
+**Start node server**
 
 react-native start or npx react-native start
 
