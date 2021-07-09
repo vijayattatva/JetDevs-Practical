@@ -52,6 +52,7 @@ This is where screen components will live. A screen is a React component which w
 # Setup Project
 
 Install and run on android
+
 yarn install or npn install
 react-native run-android
 
