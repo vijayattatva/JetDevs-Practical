@@ -7,8 +7,12 @@ import HomeNavigator from './home-navigator';
 
 const Stack = createStackNavigator();
 
-export default function RootNavigator(props: any) {
-  const login = useSelector((state: any) => state.UserLogin);
+type UserLogin = {
+  UserLogin: object;
+};
+
+export default function RootNavigator() {
+  const login = useSelector((state: UserLogin) => state.UserLogin);
   return (
     <NavigationContainer>
       <Stack.Navigator

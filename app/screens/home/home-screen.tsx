@@ -4,11 +4,22 @@ import { SafeAreaView, FlatList, Alert, View, ActivityIndicator, RefreshControl 
 import { getUserDetails, UserData } from '../../redux/actions/userAction';
 import UserItem from '../../components/user/user-item';
 import { styles } from './styles';
+import { UserItemModal } from '../../models/user-model';
+
+type UserDataItem = {
+  UserData: User;
+};
+
+type User = {
+  userList: UserItemModal[];
+  userLoadMore: boolean;
+  isLoading: boolean;
+};
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
-  const user = useSelector((state: any) => state.UserData);
-  const [arrUserList, setArrUserList]: any = useState([]);
+  const user = useSelector((state: UserDataItem) => state.UserData);
+  const [arrUserList, setArrUserList] = useState([]);
   const [
     onEndReachedCalledDuringMomentum,
     setonEndReachedCalledDuringMomentum,
@@ -40,7 +51,7 @@ const HomeScreen = () => {
     );
   };
 
-  const onFavoritePress = (index: any) => {
+  const onFavoritePress = (index: number) => {
     const { userList } = user;
     let arrayList = [...userList];
     if (arrayList[index].isFavorite) {
@@ -58,7 +69,7 @@ const HomeScreen = () => {
     }
   };
 
-  const renderItem = (item: any, index: number) => {
+  const renderItem = (item: UserItemModal, index: number) => {
     return (
       <UserItem
         key={index}

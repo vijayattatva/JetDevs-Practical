@@ -2,10 +2,11 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { images } from '../../assets';
+import { UserItemModal } from '../../models/user-model';
 import { styles } from './styles';
 
 interface UserItemProps {
-  item: any;
+  item: UserItemModal;
   onFavoritePress: () => void;
 }
 

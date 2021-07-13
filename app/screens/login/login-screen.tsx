@@ -6,18 +6,23 @@ import { styles } from './styles';
 
 const MY_EMAIL = "reactnative@imaginato.com";
 const MY_PASSWORD = "imaginato@123";
+
+type UserLoginModal = {
+  UserLogin: object;
+};
+
 const LoginScreen = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const login = useSelector((state: any) => state.UserLogin);
+  const [email, setEmail] = useState(MY_EMAIL);
+  const [password, setPassword] = useState(MY_PASSWORD);
+  const login = useSelector((state: UserLoginModal) => state.UserLogin);
   const dispatch = useDispatch();
 
   console.log(login);
-  const onEmailTextChange = (value: any) => {
+  const onEmailTextChange = (value: string) => {
     setEmail(value);
   };
 
-  const onPasswordTextChange = (value: any) => {
+  const onPasswordTextChange = (value: string) => {
     setPassword(value);
   };
 

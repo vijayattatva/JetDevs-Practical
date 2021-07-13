@@ -3,11 +3,16 @@ import * as Action from '../types';
 const initialState = {
   userErr: '',
   isLoading: false,
-  userList: [] as any,
+  userList: [],
   userLoadMore: false,
 };
 
-export default function (state = initialState, action) {
+type Action = {
+  type: string;
+  payload: object;
+};
+
+export default function (state = initialState, action: Action) {
   switch (action.type) {
     case Action.USER_LOADING:
       return {
