@@ -8,30 +8,55 @@ Currently includes:
 - TypeScript
 
 project
+
 ├── app
+
 │   ├── assets
+
 │   ├── components
+
 │   ├── navigation
+
 │   ├── redux
+
 │   ├── screens
+
 ├── README.md
+
 ├── android
+
 │   ├── app
+
 │   ├── build.gradle
+
 │   ├── gradle
+
 │   ├── gradle.properties
+
 │   ├── gradlew
+
 │   ├── gradlew.bat
+
 │   ├── keystores
+
 │   └── settings.gradle
+
 ├── index.js
+
 ├── ios
+
 │   ├── JetDevPractical
+
 │   ├── JetDevPractical-tvOS
+
 │   ├── JetDevPractical-tvOSTests
+
 │   ├── JetDevPractical.xcodeproj
+
 │   └── JetDevPractical
+
 └── package.json
+
 
 **assets** Where all the images will live of the entire application.
 
@@ -51,19 +76,27 @@ This is where screen components will live. A screen is a React component which w
 
 # Setup Project
 
-Install and run on android
+**Install and run on android**
+
 yarn install or npn install
+
 react-native run-android
 
-Install and run on ios
+**Install and run on ios**
+
 yarn install or npn install
+
 cd ios
+
 pod install
+
 react-native run-ios
 
-Start node server
+**Start node server**
+
 react-native start or npx react-native start
 
 Note: If the react-native environment is not setup please follow the below link.
+
 https://reactnative.dev/docs/environment-setup
 
